@@ -30,17 +30,14 @@ func readSQL(queryName string) string {
 }
 
 func connect() *sql.DB {
-	fmt.Println("Attempting to connect to database ...")
-
-	connString := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable",
-		os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_DATABASE"))
+	connString := fmt.Sprintf("postgres://%s:%s@%s/%s?sslmode=disable",
+		os.Getenv("DB_USER"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_HOST"), os.Getenv("DB_DATABASE"))
 
 	db, err := sql.Open("postgres", connString)
 	if err != nil {
 		fmt.Println("Failed to connect!")
 		panic(err)
 	}
-	fmt.Println("Connection was successfull!")
 	return db
 }
 

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - 32770:5432
+    environment:
+      POSTGRES_DB: report_import
+      POSTGRES_USER: report_import
+      POSTGRES_PASSWORD: 123123

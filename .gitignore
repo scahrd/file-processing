@@ -1,1 +1,5 @@
 .DS_store
+
+apps/importer/temp_file/*
+apps/importer/files/processed/*
+apps/importer/files/failed/*

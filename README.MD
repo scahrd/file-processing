@@ -3,7 +3,7 @@ A quite simple and small command line tool to process a given base file and stor
 
 ## Getting started:
 
-Download docker-compose if not already installed Then run the following commands:
+Download docker-compose if not already installed, then run the following commands:
 
 ```
 $ cd ~/go/src
@@ -16,7 +16,7 @@ This will setup the Postgres container.
 
 ### Setting things up
 ```
-$ cd file-processing.git
+$ cd file-processing
 $ go get go get ./apps/setup
 $ go get ./apps/importer
 $ go run setup/main.go
@@ -30,8 +30,6 @@ From within the apps directory, run:
 ```
 $ go run importer/*.go
 ```
-
 And now the app will read the files there are into the `importer/files` and process them.
-
 
 _From within each app directory you can find other readmes to better understand each objective._

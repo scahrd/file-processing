@@ -1,28 +1,15 @@
 # File Processing tool
 
-## Running with Docker
-Download docker-compose if not already installed Then run the following commands:
-```
-	$ git clone https://github.com/scahrd/file-processing.git
-	$ docker-compose up
-```
-
-## Running without Docker
+## Running
 
 ### Installing
 ```
-    cd apps/setup
-    go get
+    go get go get ./apps/setup
+    go get ./apps/importer
+    go run setup/main.go
 ```
 
-Return to the apps directory and run
-    ```go run setup/main.go```
-
-It will now setup the detabase's structures (tables and triggers).
-```
-    cd ../importer
-    go get
-```
+It will download all the dependecies and setup the detabase's structures (tables and triggers).
 
 ### Running the app
 
@@ -30,4 +17,5 @@ From within the apps directory, run
 ```
     go run importer/*.go
 ```
+
 And now the app will read the files there are into the `importer/files` and process them.
